@@ -1,0 +1,83 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "prettier/@typescript-eslint",
+        "plugin:prettier/recommended",
+        "plugin:import/typescript",
+        "plugin:jsx-a11y/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "prettier",
+        "@typescript-eslint",
+        "react-native",
+        "react-hooks",
+        "jsx-a11y",
+        "import",
+        "import-helpers"
+    ],
+    "rules": {
+        "prettier/prettier": "error",
+        "no-use-before-define": "off",
+        "camelcase": "off",
+        "no-shadow": "off",
+        "no-undef": "off",
+        "import/prefer-default-export": "off",
+        "import/no-cycle": "off",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "react/jsx-filename-extension": [
+            "error",
+            {
+                "extensions": [
+                    ".tsx"
+                ]
+            }
+        ],
+        "react/prop-types": "off",
+        "react/style-prop-object": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "react-native/no-color-literals": "off",
+        "react-native/sort-styles": "off",
+        "import-helpers/order-imports": [
+            "warn",
+            {
+                "newlinesBetween": "always",
+                "groups": [
+                    "/^react/",
+                    "module",
+                    "/^@shared/",
+                    [
+                        "parent",
+                        "sibling",
+                        "index"
+                    ]
+                ],
+                "alphabetize": {
+                    "order": "asc",
+                    "ignoreCase": true
+                }
+            }
+        ]
+    }
+}
