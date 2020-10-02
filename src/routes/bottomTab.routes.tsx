@@ -1,8 +1,12 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 import { AntDesign, Fontisto } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+import ComingSoon from '../pages/ComingSoon';
+import Home from '../pages/Home';
+import Wallet from '../pages/Wallet';
 
 const TabBottom = createBottomTabNavigator();
 
@@ -44,7 +48,7 @@ const BottomTabRoutes: React.FC = () => {
             <AntDesign name="home" color={color} size={size} />
           ),
         }}
-        component={() => <View />}
+        component={Home}
       />
       <TabBottom.Screen
         name="Wallet"
@@ -54,7 +58,7 @@ const BottomTabRoutes: React.FC = () => {
             <AntDesign name="wallet" color={color} size={size} />
           ),
         }}
-        component={() => <View />}
+        component={Wallet}
       />
       <TabBottom.Screen
         name="Payment"
@@ -64,7 +68,7 @@ const BottomTabRoutes: React.FC = () => {
             <Fontisto name="dollar" color={color} size={size} />
           ),
         }}
-        component={() => <View />}
+        component={ComingSoon}
       />
       <TabBottom.Screen
         name="Notification"
@@ -74,7 +78,7 @@ const BottomTabRoutes: React.FC = () => {
             <AntDesign name="bells" color={color} size={size} />
           ),
         }}
-        component={() => <View />}
+        component={ComingSoon}
       />
       <TabBottom.Screen
         name="Setting"
@@ -84,7 +88,7 @@ const BottomTabRoutes: React.FC = () => {
             <AntDesign name="user" size={size} color={color} />
           ),
         }}
-        component={() => <View />}
+        component={ComingSoon}
       />
     </TabBottom.Navigator>
   );
